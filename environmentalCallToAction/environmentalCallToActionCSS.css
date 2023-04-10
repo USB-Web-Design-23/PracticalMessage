@@ -1,0 +1,26 @@
+body {
+	background-color: saddlebrown;
+}
+
+.header {
+	color: lawngreen;
+	text-align: center;
+}
+
+.paragraph {
+	color: goldenrod;
+	text-align: center;
+}
+
+.dropdown {
+	color:darkblue;
+}
+
+.dropdown-content {
+	display: none;
+	color:lightblue;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
