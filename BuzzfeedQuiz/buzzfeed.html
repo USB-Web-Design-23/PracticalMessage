@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="buzzfeed.css">
+	<title></title>
+</head>
+<body>
+	<h1 id="title">ARE YOU A BAD PERSON QUIZ</h1>
+	<div id="divCenter">
+		<!-- This is the form with all the questions -->
+		<form>
+			<!--when do you wake up question-->
+			<div class="boxes">
+				<label>When do you wake up?</label><br>
+				<input type="radio" name="fav_time" id="1" value="3">
+				<label for="1">Before 4am</label><br>
+				<input type="radio" name="fav_time" id="3" value="1">
+				<label for="3">Before 12pm</label><br>
+				<input type="radio" name="fav_time" id="4" value="0">
+				<label for="4">After 12pm</label><br>
+				<input type="radio" name="fav_time" id="2" value="2">
+				<label for="2">Before 8am</label><br>
+			</div>
+			<!--what do you eat for breakfast question-->
+			<div class="boxes">
+				<label>What do you eat for breakfast</label><br>
+				<input type="radio" name="fav_breakfast" id="5" value="3">
+				<label for="5">cereal without milk</label><br>
+				<input type="radio" name="fav_breakfast" id="7" value="1">
+				<label for="7">eggs</label><br>
+				<input type="radio" name="fav_breakfast" id="6" value="2">
+				<label for="6">buiscuts and jam</label><br>
+				<input type="radio" name="fav_breakfast" id="8" value="0">
+				<label for="8">cinammon toast crunch</label><br>
+			</div>
+			<!--how many speeding tickets question-->
+			<div class="boxes">
+				<label>How many speeding tickets do you have</label><br>
+				<input type="radio" name="fav_tickets" id="12" value="0">
+				<label for="12">1</label><br>
+				<input type="radio" name="fav_tickets" id="9" value="3">
+				<label for="9">0</label><br>
+				<input type="radio" name="fav_tickets" id="10" value="2">
+				<label for="10">more than 10</label><br>
+				<input type="radio" name="fav_tickets" id="11" value="1">
+				<label for="11">more than 1</label><br>
+			</div>
+			<!--What is the best kind of milk question-->
+			<div class="boxes">
+				<label>What is the best kind of milk</label><br>
+				<input type="radio" name="fav_milk" id="14" value="2">
+				<label for="14">Whole</label><br>
+				<input type="radio" name="fav_milk" id="13" value="3">
+				<label for="13">Almond</label><br>
+				<input type="radio" name="fav_milk" id="15" value="1">
+				<label for="15">2%</label><br>
+				<input type="radio" name="fav_milk" id="16" value="0">
+				<label for="16">Chocolate</label><br>
+			</div>
+			<!--What is your favorite fruit question-->
+			<div class="boxes">
+				<label>What is your favorite fruit</label><br>
+				<input type="radio" name="fav_fruit" id="17" value="3">
+				<label for="17">Apple</label><br>
+				<input type="radio" name="fav_fruit" id="20" value="0">
+				<label for="20">Mango</label><br>
+				<input type="radio" name="fav_fruit" id="18" value="2">
+				<label for="18">Grapfruit</label><br>
+				<input type="radio" name="fav_fruit" id="19" value="1">
+				<label for="19">Orange</label><br>
+			</div>
+			<!--What would you eat for lunch question-->
+			<div class="boxes">
+				<label>What would you eat for lunch</label><br>
+				<input type="radio" name="fav_lunch" id="21" value="3">
+				<label for="21">Anchovies</label><br>
+				<input type="radio" name="fav_lunch" id="22" value="2">
+				<label for="22">Sandwich</label><br>
+				<input type="radio" name="fav_lunch" id="23" value="1">
+				<label for="23">Waffles</label><br>
+				<input type="radio" name="fav_lunch" id="24" value="0">
+				<label for="24">Chicken</label><br>
+			</div>
+			<!--submit button-->
+			<input type="button" name="How bad are you?" value="submit" onclick="findResults()">
+			<input type="reset" name="try again" value="reset">
+			<br>
+			<input id="showAnswers" type="button" name="show answers" value=" show answers" onclick="showResults()" style="visibility: hidden;">
+		</form>
+	<!--answer window pop-up-->
+	</div>
+	<div id="divAnswer">
+		<div id="divX">
+			<form>
+				<input type="button" name="closeButton" value="X" onclick="closeWindow()">
+			</form>
+		</div>
+		<h1 style="color: red;">Your percent bad is:</h1>
+		<h1 id="answer" style="color: red;"></h1>
+		<h1  style="color: red;">%</h1>
+	</div>
+</body>
+<script type="text/javascript">
+	//javascript funtion to add up score when submit button is clicked
+	function findResults(){
+		var total = 0;
+		var selected = 0;
+		for (var i = 1; i < 25; i++) {
+			if(document.getElementById(i.toString()).checked == true) {
+				total += Number.parseInt(document.getElementById(i.toString()).value);
+				selected ++;
+			}
+		}
+		var answer = (total/18) * 100;
+		//makes answer window visible
+		if (selected == 6){
+			document.getElementById("answer").innerHTML = answer;
+			document.getElementById("divAnswer").style.visibility = "visible";
+			document.getElementById("showAnswers").style.visibility = "visible";
+		} else {
+			window.alert("incorrect amount of answers selected");
+		}
+	}
+	//supposed to make answer window invisible
+	function closeWindow(){
+		document.getElementById("divAnswer").style.visibility = "hidden";
+	}
+
+	//opens the answer window
+	function showResults(){
+		document.getElementById("divAnswer").style.visibility = "visible";
+	}
+</script>
+</html>
