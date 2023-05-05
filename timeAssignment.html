@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1 id="time">Select a place</h1>
+	<h1 onclick="tacomaTime()">Tacoma</h1>
+	<h1 onclick="londonTime()">London</h1>
+	<h1 onclick="tokyoTime()">Tokyo</h1>
+</body>
+<script type="text/javascript">
+	const constant = {
+		change: 0,
+		currentTime: 16,
+	};
+
+	function tacomaTime(){
+		var h = "";
+		constant.currentTime -= constant.change;
+		constant.change = 0;
+		constant.currentTime += constant.change;
+		amount = Math.floor(constant.currentTime/12) * 12;
+		if (((amount/12) % 2) == 1){
+			h = "pm";
+		} else {
+			h = "am";
+		}
+		var tempTime = constant.currentTime - amount;
+		if (tempTime == 0) {
+			tempTime = 12;
+		}
+		text = "Tacoma time is " + tempTime.toString() + ":00 " + h;
+		document.getElementById("time").innerHTML = text;
+	}
+
+	function londonTime(){
+		constant.currentTime -= constant.change;
+		constant.change = 8;
+		constant.currentTime += constant.change;
+		amount = Math.floor(constant.currentTime/12) * 12;
+		if (((amount/12) % 2) == 1){
+			h = "pm";
+		} else {
+			h = "am";
+		}
+		var tempTime = constant.currentTime - amount;
+		if (tempTime == 0) {
+			tempTime = 12;
+		}
+		text = "London time is " + tempTime.toString() + ":00 " + h;
+		document.getElementById("time").innerHTML = text;
+	}
+
+	function tokyoTime(){
+		constant.currentTime -= constant.change;
+		constant.change = -8;
+		constant.currentTime += constant.change;
+		amount = Math.floor(constant.currentTime/12) * 12;
+		if (((amount/12) % 2) == 1){
+			h = "pm";
+		} else {
+			h = "am";
+		}
+		var tempTime = constant.currentTime - amount;
+		if (tempTime == 0) {
+			tempTime = 12;
+		}
+		text = "Tokyo time is " + tempTime.toString() + ":00 " + h;
+		document.getElementById("time").innerHTML = text;
+	}
+</script>
+</html>
