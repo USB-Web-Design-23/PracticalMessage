@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- links to css file -->
+	<link rel="stylesheet" type="text/css" href="portfolioCSS.css">
+	<!-- sets position to top of page on refresh -->
+	<script>history.scrollRestoration = "manual"</script>
+	<!-- title that shows up on tab -->
+	<title>Rowan's Portfolio</title>
+</head>
+<body>
+	<!-- to top button -->
+	<a href="#top"><div class="toTop">return to top</div></a>
+	<!-- title div -->
+	<div class="title" id="top">
+		<h1>portfolio</h1>
+	</div>
+	<!-- divs for navigation row that scrolls to parts of the webpage -->
+	<div class="navRow">
+		<div class="navColumn" onclick="window.location.href='#1';">Recurring Dream</div>
+		<div class="navColumn" onclick="window.location.href='#2';">Favorite Animal</div>
+		<div class="navColumn" onclick="window.location.href='#3';">Environmental Call To Action</div>
+		<div class="navColumn" onclick="window.location.href='#4';">Spring PNW</div>
+		<div class="navColumn" onclick="window.location.href='#5';">BuzzFeed Quiz</div>
+		<div class="navColumn" onclick="window.location.href='#6';">Ciphers</div>
+	</div>
+	<!-- all of these paragraphs follow the same format as this paragraph -->
+	<!-- this paragraph's comments apply to all paragraphs -->
+	<div class="main a" id="1">
+		<!-- header -->
+		<h1 class="title">Recurring Dream</h1>
+		<!-- link with image inside that links to actual webpage that image previews -->
+		<a href="recurringDream/recurringDream.html"><img class="preview dream" src="images/dream.png"></a>
+		<!-- short description paragraph -->
+		<div class="b desc">
+			<p>This project is a small paragraph about a recurring dream I have.  The dream is about a lobster who is trying to pinch me.  Hover on the image above for a preview, or click to visit the page.</p>
+		</div>
+	</div>
+	<div class="main b" id="2">
+		<h1 class="title">Favorite Animal</h1>
+		<a href="favoriteAnimal/favoriteAnimal.html"><img class="preview cat" src="images/pickles.png"></a>
+		<div class = "a desc">
+			<p>This project is about my favorite animal, cats.  The image above is actually my cat, Picket, or Pickles as we call her.  To learn more about cats, click on the image above, or hover for a preview.</p>
+		</div>
+	</div>
+	<div class="main a" id="3">
+		<h1 class="title">Environmental Call to Action</h1>
+		<a href="environmentalCallToAction/environmentalCallToAction.html"><img class="preview ecta" src="images/deforestation.png"></a>
+		<div class="b desc">
+			<p>This project is about deforestation.  I picked deforestation for my Environmental Call to Action project because it is destroying lots of trees and animals.  The image above shows what defoestation looks like. Hover on the image for a preview, or click to visit the page.</p>
+		</div>
+	</div>
+	<div class="main b" id="4">
+		<h1 class="title">Spring PNW</h1>
+		<a href="SpringPNW/springPNWhome.html"><img class="preview SpringPNW" src="images/rainier.png"></a>
+		<div class = "a desc">
+			<p>This project is about something to do in the Pacific Northwest in the Spring. My project talks about Pike Place Market.  Pike Place Market is an open market in Seattle, Washington where you can get food, fish, crafts, and go to events.  Click or hover on the image above for more information.</p>
+		</div>
+	</div>
+	<div class="main a" id="5">
+		<h1 class="title">Buzzfeed Quiz</h1>
+		<a href="BuzzfeedQuiz/buzzfeed.html"><img class="preview quiz" src="images/question.png"></a>
+		<div class="b desc">
+			<p>This project is a quiz that test how bad of a person you are based on 6 very accurate questions.  Hover on the image above for a preview, or click to take the quiz yourself.</p>
+		</div>
+	</div>
+	<div class="main b" id="6">
+		<h1 class="title">Cyphers</h1>
+		<a href="cypher/cypher.html"><img class="preview ecta" src="images/numbers.png"></a>
+		<div class = "a desc">
+			<p>This project was done at the same time as this portfolio, and gives some information about cyphers.  Hover on the image above for a preview, or click it to visit the actual page.</p>
+		</div>
+	</div>
+	<!-- bottom row of buttons similar to navigation row at top -->
+	<div class="bottomRow">
+		<!-- about me website -->
+		<div class="bottomColumn" onclick="window.location.href='aboutMe/aboutMe.html';">About Me</div>
+		<!-- Frequently Asked Questions -->
+		<div class="bottomColumn" onclick="window.location.href='FAQ/FAQ.html';">FAQ</div>
+	</div>
+</body>
+</html>

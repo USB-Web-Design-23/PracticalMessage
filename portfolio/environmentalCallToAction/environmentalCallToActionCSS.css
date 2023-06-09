@@ -1,0 +1,32 @@
+/*gives full site saddlebrown hebsite*/
+body {
+	background-color: saddlebrown;
+}
+
+/*header class for title*/
+.header {
+	color: lawngreen;
+	text-align: center;
+}
+
+/*for div with paragraph and list*/
+.paragraph {
+	color: goldenrod;
+	text-align: center;
+}
+
+/*style for dropdown for links to other info*/
+.dropdown {
+	color:darkblue;
+}
+
+/*stule for content in dropdown*/
+.dropdown-content {
+	display: none;
+	color:lightblue;
+}
+
+/*sets up dropdown*/
+.dropdown:hover .dropdown-content {
+	display: block;
+}

@@ -1,0 +1,128 @@
+/*style for entire body*/
+.home {
+	background-image: url(pikePlace.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*style for food page*/
+.food {
+	background-color: beige;
+}
+
+/*style for fish page*/
+.fish {
+	background-color: floralwhite;
+}
+
+/*style for art page*/
+.art {
+	background-color: rebeccapurple;
+}
+
+/*style for event page*/
+.event {
+	background-color: lavender;
+}
+
+/*style for back button*/
+#back {
+	background-color: red;
+	color: darkgray;
+	position: fixed;
+	text-align: center;
+	width: 15%;
+	height: 50px;
+}
+
+/*these divs are for the row of divs in the navigation bar*/
+#div1 {
+	background-color: darkgray;
+	opacity: 50%;
+	text-align: center;
+	position: inherit;
+	color: red;
+	width: 25%;
+	height: 50px;
+	margin: 0%;
+	top: 0px;
+	display: table-cell;
+}
+
+#div2 {
+	background-color: darkgray;
+	opacity: 50%;
+	text-align: center;
+	position: inherit;
+	color: red;
+	width: 25%;
+	height: 50px;
+	top: 0px;
+	margin: 25%;
+	display: table-cell;
+}
+
+#div3 {
+	background-color: darkgray;
+	opacity: 50%;
+	text-align: center;
+	position: inherit;
+	color: red;
+	width: 25%;
+	height: 50px;
+	margin:0%;
+	top: 0px;
+	display: table-cell;
+}
+
+#div4 {
+	background-color: darkgray;
+	opacity: 50%;
+	text-align: center;
+	position: inherit;
+	color: red;
+	width: 25%;
+	height: 50px;
+	top: 0px;
+	margin: 25%;
+	display: table-cell;
+}
+
+/*these are the hover styles for the divs above*/
+#div1:hover {
+	background-color: gray;
+	opacity: 100%;
+	animation-name: hover;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+#div2:hover {
+	background-color: gray;
+	opacity: 100%;
+	animation-name: hover;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+#div3:hover {
+	background-color: gray;
+	opacity: 100%;
+	animation-name: hover;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}	
+
+#div4:hover {
+	background-color: gray;
+	opacity: 100%;
+	animation-name: hover;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+/*animation for div hover size change*/
+@keyframes hover{
+	0% {width: 25%}
+	100% {width: 50%}
+}

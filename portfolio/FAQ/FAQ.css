@@ -1,0 +1,41 @@
+/*sets up title and animation*/
+.title {
+	text-align: center;
+	color: red;
+	animation-name: title;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+/*keyframes for title animation*/
+@keyframes title{
+	0% {color: red;}
+	20% {color: orange;}
+	40% {color: yellow;}
+	60% {color: green;}
+	80% {color: blue;}
+	100% {color: purple;}
+}
+
+/*questions text style*/
+.questions {
+	text-align: center;
+	color: gray;
+}
+
+/*questions hover and animation*/
+.questions:hover {
+	animation-name: questions;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+/*keyframes for questions hover animation*/
+@keyframes questions{
+	0% {color: blue;}
+	20% {color: green;}
+	40% {color: blue;}
+	60% {color: green;}
+	80% {color: blue;}
+	100% {color: green;}
+}

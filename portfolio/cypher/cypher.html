@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- links to cipher css file -->
+	<link rel="stylesheet" type="text/css" href="cypher.css">
+	<title>Ciphers</title>
+</head>
+<body>
+	<!-- main header -->
+	<h1 class="title">Ciphers</h1>
+	<!-- div with image and text -->
+	<div class="main">
+		<div>
+			<!-- information paragraph -->
+			<p class="text">Ciphers have been around for a long time.  Juluis Caeser famously used a cipher called the Caeser Cipher.  This Cipher was followed by other cyphers that improved on the basic design of the Caeser Cipher.  The Caeser Cipher was easy to break, because of its patterns.  Another famous, and more recent example of a cipher was the Enigma Machine in World War 2.  The Enigma Machine was considered to be unbreakable, intil Alan Turing created a computer to break it.</p>
+			<!-- cipher image -->
+			<img src="cipher.png" class="main">
+		</div>
+	</div>
+	<!-- form with inputs and button for encoder -->
+	<form>
+		<h1 style="text-align: center;">Try this encoder!!</h1>
+		<input type="text" id="text" name="text" value="phrase" class="main">
+		<br>
+		<input type="text" id="shift" name="shift" value="shift" class="main">
+		<br>
+		<input type="button" name="submit" value="submit" onclick="encode()" class="main">
+	</form>
+	<!-- result text -->
+	<h1 style="text-align: center;" id="result">Result</h1>
+</body>
+<!-- javascript code -->
+<script type="text/javascript">
+	function encode(){
+
+		//object definition
+		const info = {
+			phrase:document.getElementById("text").value,
+			shift:parseInt(document.getElementById("shift").value)
+		};
+
+		//sets empty string to be filled as result
+		var result = "";
+
+		//loops through phase and shifts the shift
+		for (let i = 0; i<info.phrase.length; i++){
+			//finds ascii code
+			var temp = info.phrase[i].charCodeAt(0);
+			//adds shift to ascii code
+			temp += info.shift;
+			//prints result
+			result += String.fromCharCode(temp);
+		}
+
+		//sets result
+		document.getElementById("result").innerHTML = result;
+
+	}
+</script>
+</html>
